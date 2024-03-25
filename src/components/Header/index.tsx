@@ -1,17 +1,22 @@
-import { View, Text, StyleSheet, SafeAreaView } from 'react-native';
+import { View, Text, StyleSheet, SafeAreaView, TouchableOpacity} from 'react-native';
 import { Feather, FontAwesome6, Entypo} from '@expo/vector-icons';
 import theme from '../../theme'
 
 export function Header() {
     return (
         <SafeAreaView style={styles.container} >
-            <Text style={styles.text} >
-                Whatsapp
-            </Text>
+            <View>
+                <Text style={styles.text} >
+                    Whatsapp
+                </Text>
+            </View>
             <View style={styles.icons} >
-                <Feather name="camera" size={24} color="white" />
-                <FontAwesome6 name="magnifying-glass" size={24} color="white" />
-                <Entypo name="dots-three-vertical" size={24} color="white" />
+                <TouchableOpacity><Feather name="camera" size={24} color="white" /></TouchableOpacity>
+                
+                <TouchableOpacity><FontAwesome6 name="magnifying-glass" size={24} color="white" /></TouchableOpacity>
+                
+                <TouchableOpacity><Entypo name="dots-three-vertical" size={24} color="white" /></TouchableOpacity>
+                
             </View>
         </SafeAreaView>
     );
@@ -23,20 +28,25 @@ const styles = StyleSheet.create({
     container:{
         backgroundColor: theme.COLORS.GRAY_600,
         paddingTop: 45,
-        paddingBottom: 10,
+        paddingBottom: 18,
         paddingStart: 14,
         flexDirection: 'row',
         justifyContent:'space-between',
-        alignItems: 'center'
+        alignItems: 'center',
     },
+
 
     text:{
         fontSize: theme.FONT_SIZE.XG,
         color: theme.COLORS.WHITE,
         fontWeight: 'bold',
+
     },
 
     icons:{
+        flex: 1,
         flexDirection: 'row',
+        justifyContent: 'space-around',
+        paddingStart: 165
     }
 });
