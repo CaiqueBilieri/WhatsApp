@@ -1,24 +1,30 @@
 import { View, Text, StyleSheet, SafeAreaView, TouchableOpacity} from 'react-native';
 import { Feather, FontAwesome6, Entypo} from '@expo/vector-icons';
-import theme from '../../theme'
+import {Archiveds} from '../Archiveds';
+import theme from '../../theme';
 
 export function Header() {
     return (
-        <SafeAreaView style={styles.container} >
-            <View>
-                <Text style={styles.text} >
-                    Whatsapp
-                </Text>
-            </View>
-            <View style={styles.icons} >
-                <TouchableOpacity><Feather name="camera" size={24} color="white" /></TouchableOpacity>
-                
-                <TouchableOpacity><FontAwesome6 name="magnifying-glass" size={24} color="white" /></TouchableOpacity>
-                
-                <TouchableOpacity><Entypo name="dots-three-vertical" size={24} color="white" /></TouchableOpacity>
-                
-            </View>
-        </SafeAreaView>
+        <View>
+            <SafeAreaView style={styles.container} >
+                <View>
+                    <Text style={styles.text} >
+                        Whatsapp
+                    </Text>
+                </View>
+                <View style={styles.icons} >
+                    <TouchableOpacity><Feather name="camera" size={24} color="white" /></TouchableOpacity>
+                    
+                    <TouchableOpacity><FontAwesome6 name="magnifying-glass" size={24} color="white" /></TouchableOpacity>
+                    
+                    <TouchableOpacity><Entypo name="dots-three-vertical" size={24} color="white" /></TouchableOpacity>
+                    
+                </View>
+            </SafeAreaView>
+
+        <Archiveds/>
+
+        </View>
     );
 }
 
@@ -28,7 +34,7 @@ const styles = StyleSheet.create({
     container:{
         backgroundColor: theme.COLORS.GRAY_600,
         paddingTop: 45,
-        paddingBottom: 18,
+        paddingBottom: 10,
         paddingStart: 14,
         flexDirection: 'row',
         justifyContent:'space-between',
