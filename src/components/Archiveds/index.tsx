@@ -4,7 +4,7 @@ import theme from '../../theme';
 
 export function Archiveds() {
     return (
-        <TouchableOpacity>
+        <TouchableOpacity activeOpacity={0.8}>
             <View style={styles.container} >
                     <Ionicons name="archive-outline" size={23} color="white" />
 
@@ -25,10 +25,10 @@ export function Archiveds() {
 
 const styles = StyleSheet.create({
     container:{
-        backgroundColor: theme.COLORS.GRAY_500,
+        backgroundColor: theme.COLORS.GRAY_600,
         paddingTop: 15,
         paddingBottom: 15,
-        paddingStart: 14, 
+        paddingStart: 20, 
         flexDirection:'row',
     },
 

@@ -1,6 +1,9 @@
 import { View, Text, StyleSheet, SafeAreaView, TouchableOpacity} from 'react-native';
 import { Feather, FontAwesome6, Entypo} from '@expo/vector-icons';
+
 import {Archiveds} from '../Archiveds';
+import {Chat} from '../Chat';
+
 import theme from '../../theme';
 
 export function Header() {
@@ -24,6 +27,8 @@ export function Header() {
 
         <Archiveds/>
 
+        <Chat/>
+
         </View>
     );
 }
@@ -32,7 +37,7 @@ export function Header() {
 
 const styles = StyleSheet.create({
     container:{
-        backgroundColor: theme.COLORS.GRAY_600,
+        backgroundColor: theme.COLORS.GRAY_400,
         paddingTop: 45,
         paddingBottom: 10,
         paddingStart: 14,
