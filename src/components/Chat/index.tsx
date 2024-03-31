@@ -14,13 +14,13 @@ export function Chat() {
                     <Text style={styles.name} >
                         <Text>Caique</Text>
                     </Text>
-                    <Text>
-                        Digitando...
+                    <Text style={styles.messages} >
+                        Ultima mensagem para ser lida na conversa
                     </Text>
                 </View>
 
-                <Text>
-                    Data
+                <Text style={styles.data} >
+                    13:09
                 </Text>
             </View>
         </TouchableOpacity>
@@ -29,7 +29,7 @@ export function Chat() {
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: theme.COLORS.RED_DARK,
+        backgroundColor: theme.COLORS.GRAY_500,
         padding: 14,
         flexDirection:'row'
     },
@@ -40,18 +40,27 @@ const styles = StyleSheet.create({
         height: 50,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: theme.COLORS.GREEN_500,
+        backgroundColor: theme.COLORS.GRAY_300,
     },
 
     text:{
         paddingStart: 15,
-        backgroundColor: theme.COLORS.GREEN_500,
-        flex:1
+        flex:1,
     },
 
     name:{
         color: theme.COLORS.WHITE,
         fontWeight: 'bold',
         fontSize: theme.FONT_SIZE.MD
+    },
+
+    messages:{
+        color: theme.COLORS.GRAY_300,
+    },
+
+    data: {
+        fontWeight: 'bold',
+        fontSize: theme.FONT_SIZE.PQ,
+        color: theme.COLORS.GRAY_300,
     }
 });

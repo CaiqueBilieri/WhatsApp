@@ -1,8 +1,5 @@
-import { View, Text, StyleSheet, SafeAreaView, TouchableOpacity} from 'react-native';
+import { View, Text, StyleSheet, SafeAreaView, TouchableOpacity, ScrollView} from 'react-native';
 import { Feather, FontAwesome6, Entypo} from '@expo/vector-icons';
-
-import {Archiveds} from '../Archiveds';
-import {Chat} from '../Chat';
 
 import theme from '../../theme';
 
@@ -24,11 +21,6 @@ export function Header() {
                     
                 </View>
             </SafeAreaView>
-
-        <Archiveds/>
-
-        <Chat/>
-
         </View>
     );
 }

@@ -25,7 +25,7 @@ export function Archiveds() {
 
 const styles = StyleSheet.create({
     container:{
-        backgroundColor: theme.COLORS.GRAY_600,
+        backgroundColor: theme.COLORS.GRAY_500,
         paddingTop: 15,
         paddingBottom: 15,
         paddingStart: 20, 
@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
     },
 
     counter:{
-        color: theme.COLORS.GREEN_700,
+        color: theme.COLORS.GREEN,
         paddingEnd: 18,
         fontWeight: 'bold',
         fontSize: theme.FONT_SIZE.MD,
